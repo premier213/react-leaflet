@@ -2,7 +2,7 @@
   "name": "@meysam213/react-leaflet",
   "description": "React-leaflet fix for next.js",
   "author": "meysam213",
-  "version": "1.9.1",
+  "version": "1.10.0",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
