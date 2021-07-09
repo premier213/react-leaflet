@@ -1,6 +1,6 @@
 {
   "name": "@meysam213/react-leaflet",
-  "description": "React-leaflet for next.js",
+  "description": "React-leaflet fix for next.js",
   "author": "meysam213",
   "version": "1.8.27",
   "license": "MIT",
@@ -10,6 +10,12 @@
     "dist",
     "dist/*.css",
     "src"
+  ],
+  "keywords": [
+    "leaflet",
+    "react-leaflet",
+    "next.js",
+    "map"
   ],
   "engines": {
     "node": ">=10"
@@ -39,6 +45,14 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/premier213/react-leaflet.git"
+  },
+  "bugs": {
+    "url": "https://github.com/premier213/react-leaflet/issues"
+  },
+  "homepage": "https://github.com/premier213/react-leaflet",
   "module": "dist/react-leaflet.esm.js",
   "size-limit": [
     {
