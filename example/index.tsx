@@ -3,11 +3,10 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { NextMap } from '../src/index';
 
-
 const App = () => {
   return (
     <div>
-      <NextMap />
+      <NextMap lat={32.64292} lng={51.66728} />
     </div>
   );
 };

@@ -3,14 +3,14 @@ import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import './styles/index.css';
 
 interface EnteredProps {
-  scrollWheelZoom: boolean;
-  zoomControl: boolean;
-  zoom: number;
+  scrollWheelZoom?: boolean;
+  zoomControl?: boolean;
+  zoom?: number;
   lat: number;
   lng: number;
-  height: string;
-  width: string;
-  attributionControl: boolean;
+  height?: string;
+  width?: string;
+  attributionControl?: boolean;
 }
 
 export const NextMap = (props: EnteredProps) => {
@@ -24,7 +24,7 @@ export const NextMap = (props: EnteredProps) => {
     width,
     attributionControl,
   } = props;
-  const position = { lat: lat, lng: lng };
+  const position = { lat, lng };
   React.useEffect(() => {
     const L = require('leaflet');
 
@@ -40,12 +40,12 @@ export const NextMap = (props: EnteredProps) => {
   }, []);
   return (
     <MapContainer
-      center={position}
-      zoom={zoom}
-      scrollWheelZoom={scrollWheelZoom}
-      attributionControl={attributionControl}
-      zoomControl={zoomControl}
-      style={ { height: height , width: width }}
+      center={[lat, lng]}
+      zoom={zoom ?? 17}
+      scrollWheelZoom={scrollWheelZoom ?? true}
+      attributionControl={attributionControl ?? false}
+      zoomControl={zoomControl ?? false}
+      style={{ height: height ?? '300px', width: width ?? '300px' }}
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
