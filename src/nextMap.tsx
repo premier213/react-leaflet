@@ -12,6 +12,7 @@ interface EnteredProps {
   width?: string;
   attributionControl?: boolean;
   popUp?: string;
+  borderRadius?: string;
 }
 
 export const NextMap = (props: EnteredProps) => {
@@ -25,6 +26,7 @@ export const NextMap = (props: EnteredProps) => {
     width,
     attributionControl,
     popUp,
+    borderRadius,
   } = props;
   const position = { lat, lng };
   React.useEffect(() => {
@@ -47,7 +49,11 @@ export const NextMap = (props: EnteredProps) => {
       scrollWheelZoom={scrollWheelZoom ?? true}
       attributionControl={attributionControl ?? false}
       zoomControl={zoomControl ?? false}
-      style={{ height: height ?? '300px', width: width ?? '300px' }}
+      style={{
+        height: height ?? '300px',
+        width: width ?? '300px',
+        borderRadius: borderRadius ?? '0',
+      }}
       popUp={popUp ?? 'Hello!'}
     >
       <TileLayer

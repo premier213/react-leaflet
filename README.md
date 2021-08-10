@@ -55,6 +55,7 @@ const MapBox = dynamic(() => import('components/mapBox'), {
 | Height             | `300px`  | String  | Optional  |
 | Width              | `300px`  | String  | Optional  |
 | popUp              | `Hello!` | String  | Optional  |
+| borderRadius       | `0px`    | String  | Optional  |
 
 ## Author
 
