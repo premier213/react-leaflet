@@ -11,6 +11,7 @@ interface EnteredProps {
   height?: string;
   width?: string;
   attributionControl?: boolean;
+  popUp?: string;
 }
 
 export const NextMap = (props: EnteredProps) => {
@@ -23,6 +24,7 @@ export const NextMap = (props: EnteredProps) => {
     height,
     width,
     attributionControl,
+    popUp,
   } = props;
   const position = { lat, lng };
   React.useEffect(() => {
@@ -46,15 +48,14 @@ export const NextMap = (props: EnteredProps) => {
       attributionControl={attributionControl ?? false}
       zoomControl={zoomControl ?? false}
       style={{ height: height ?? '300px', width: width ?? '300px' }}
+      popUp={popUp ?? 'Hello!'}
     >
       <TileLayer
         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <Marker position={position}>
-        <Popup>
-          A pretty CSS3 popup. <br /> Easily customizable.
-        </Popup>
+        <Popup>{popUp}</Popup>
       </Marker>
     </MapContainer>
   );
